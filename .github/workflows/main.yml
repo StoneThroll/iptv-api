@@ -2,8 +2,10 @@ name: 'Update schedule'
 
 on:
   schedule:
-    - cron: '0 22,10 * * *'
-  workflow_dispatch:
+    # - cron: '0 22,10 * * *' 
+    # 每两天执行一次
+    - cron: '0 10 */2 * *'
+workflow_dispatch:
     branches:
       - master
       - dev
